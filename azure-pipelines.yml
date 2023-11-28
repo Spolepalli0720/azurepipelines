@@ -4,7 +4,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 stages:
-  - stage env:
+  - stage: env
       steps:
         - script: echo Hello, world!
           displayName: 'Run a one-line script'
@@ -13,6 +13,6 @@ stages:
             echo Add other tasks to build, test, and deploy your project.
             echo See https://aka.ms/yaml
           displayName: 'Run a multi-line script'
-  - stage dev:
+  - stage: dev
       steps:
         - script: echo i am in dev
