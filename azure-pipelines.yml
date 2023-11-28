@@ -9,6 +9,7 @@ stages:
       - job: mytestjob
         steps:
         - script: |
+            ls
             apt-get install docker
             systemctl status docker
             systemctl start docker
