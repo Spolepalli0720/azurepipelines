@@ -8,9 +8,13 @@ stages:
     jobs:
       - job: mytestjob
         steps:
-        - script: echo Hello, world!
+        - script: |
+            apt-get install docker
+            systemctl status docker
+            systemctl start docker
+            docker build . 
+            docker images
           displayName: 'Run a one-line script'
-
         - script: |
             echo Add other tasks to build, test, and deploy your project.
             echo See https://aka.ms/yaml
