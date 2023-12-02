@@ -8,13 +8,8 @@ stages:
     jobs:
       - job: mytestjob
         steps:
-        - script: |
-            ls
-            apt-get install docker
-            systemctl status docker
-            systemctl start docker
-            docker build . 
-            docker images
+        - script: 
+           echo $(test)
           displayName: 'Run a one-line script'
         - script: |
             echo Add other tasks to build, test, and deploy your project.
